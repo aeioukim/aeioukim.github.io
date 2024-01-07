@@ -1,0 +1,13 @@
+.clock {
+  font-size: xx-large;
+  color: tomato;
+}
+.hidden {
+  display: none;
+}
+.todo_detail {
+  list-style: none;
+}
+.todo_checked {
+  text-decoration-line: line-through;
+}

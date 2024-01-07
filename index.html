@@ -1,4 +1,37 @@
----
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h2 class="clock">01:02:08</h2>
+    <div id="greeting_area" class="hidden">
+      <h2>greeting_area</h2>
+      <button id="logout">logout</button>
+    </div>
+    <form id="login_form">
+      <input
+        required
+        type="text"
+        id="username"
+        maxlength="15"
+        placeholder="Plase write username"
+      />
+      <button type="submit">Login</button>
+    </form>
+    <div id="todo_area" class="hidden2">
+      <form id="todo_form">
+        <input type="text" id="todo_input" placeholder="What are you do it?" />
+      </form>
+      <ul id="todo_list"></ul>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
