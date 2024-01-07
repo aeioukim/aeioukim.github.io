@@ -71,7 +71,10 @@ const load_todo_list = () => {
   let saved_todo_list = JSON.parse(localStorage.getItem('todo_list'));
   let todo_list_area = document.getElementById('todo_list');
   todo_list_area.innerHTML = '';
-  if (saved_todo_list[saved_username] !== undefined) {
+  if (
+    saved_todo_list !== null &&
+    saved_todo_list[saved_username] !== undefined
+  ) {
     saved_todo_list[saved_username].forEach((todo, i) => {
       todo_list_area.innerHTML += `
         <li class='todo_detail'>
@@ -89,6 +92,8 @@ const load_todo_list = () => {
     for (box of checkbox_todo_list) {
       box.addEventListener('click', actionCheckbox);
     }
+  } else {
+    localStorage.setItem('todo_list', {});
   }
 };
 todo_form.addEventListener('submit', (e) => {
